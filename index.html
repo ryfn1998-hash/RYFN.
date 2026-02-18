@@ -145,7 +145,7 @@
         </div>
         <div class="nav-right">
             <a href="#features" class="nav-link">生存法則</a>
-            <a href="#dashboard" class="nav-link">戰況數據</a>
+            <a href="#dashboard" class="nav-link">伺服器狀態</a>
         </div>
     </nav>
 
@@ -169,7 +169,7 @@
     </div>
 
     <section id="dashboard" class="live-status-section">
-        <div class="section-title"><h2>即時戰訊</h2><p>掌握當前伺服器運作狀態</p></div>
+        <div class="section-title"><h2>即時資訊</h2><p>掌握當前伺服器運作狀態</p></div>
         <div class="dashboard-grid">
             <div class="stat-card"><span><i class="fas fa-signal"></i> 伺服器狀態</span><span id="live-status" class="stat-value">讀取中...</span></div>
             <div class="stat-card"><span><i class="fas fa-users"></i> 當前人數</span><span id="live-players" class="stat-value">0 / 0</span></div>
@@ -184,9 +184,8 @@
     </div>
 
     <footer class="footer">
-        <p class="copyright">© 2025-2026 RYFN | 帝國永續發展計劃</p>
+        <p class="copyright">© 2026-2027 RYFN |  真正的麥塊自由生存</p>
     </footer>
-
     <div id="toast">✅ IP 複製成功，祝你好運。</div>
 
     <script>
@@ -215,10 +214,10 @@
                 const ping = Date.now() - start;
 
                 if (data.online) {
-                    document.getElementById('live-status').innerText = '運行中';
+                    document.getElementById('live-status').innerText = '伺服器開啟中';
                     document.getElementById('live-status').style.color = '#3fb950';
                     document.getElementById('live-players').innerText = `${data.players.online} / ${data.players.max}`;
-                    document.getElementById('live-version').innerText = data.version.name_clean || "1.21.1";
+                    document.getElementById('live-version').innerText = data.version.name_clean || "1.21.4";
                     document.getElementById('live-ping').innerText = `${ping} ms`;
 
                     const pList = document.getElementById('player-list');
